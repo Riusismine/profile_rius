@@ -160,23 +160,15 @@
 		</div>
 	</div>
 </div>
-<audio id="background-audio" loop>
-        <source src="Summer Ghost.mp3" type="audio/mp3">
-</audio>
-<script>
-        window.addEventListener('load', function() {
+    <audio id="background-audio" autoplay loop>
+        <source src="./background/Summer.mp3" Ghost.mp3" type="audio/mp3">
+    </audio>
+    <script>
+        window.addEventListener('click', function() {
             var audio = document.getElementById('background-audio');
-            var playPromise = audio.play();
-
-            if (playPromise !== undefined) {
-                playPromise.then(() => {
-                    console.log('Audio is playing');
-                }).catch(error => {
-                    console.log('Audio play was prevented:', error);
-                    audio.muted = false;
-                });
+            if (audio.paused) {
+                audio.play();
             }
         });
-</script>
-</script>
+		</script>
 </body>
